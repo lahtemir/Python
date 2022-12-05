@@ -31,6 +31,7 @@ while len(guessed_states) <= 50:
         x_cor = int(state_data.x)
         y_cor = int(state_data.y)
 
+        # Setting the turtle and writing guessed state on the map
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
@@ -42,9 +43,9 @@ while len(guessed_states) <= 50:
 
 
 
-
+# Adding states not guessed to states_to_learn.csv
 data = pandas.DataFrame(states_to_learn)
-data.to_csv("states_to learn.csv")
+data.to_csv("states_to_learn.csv")
 
 
 def get_mouse_click_coor(x, y):
